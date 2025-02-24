@@ -11,7 +11,7 @@ namespace ServiceBusBatching
     public class ServiceBusFunction
     {
         [FunctionName("ServiceBusFunction")]
-        public async Task RunAsync([ServiceBusTrigger("vbonnerqueue", Connection = "MyConStr", AutoCompleteMessages = false)]
+        public async Task RunAsync([ServiceBusTrigger("nameofqueue", Connection = "MyConStr", AutoCompleteMessages = false)]
         ServiceBusReceivedMessage[] messages,
         ServiceBusMessageActions messageActions,
         ILogger log)
